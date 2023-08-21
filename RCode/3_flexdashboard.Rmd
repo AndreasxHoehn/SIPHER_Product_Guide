@@ -1,0 +1,789 @@
+---
+title: "&#32;"
+# title: ""
+output: 
+  flexdashboard::flex_dashboard:
+    vertical_layout: scroll # "scroll" = adjust subpages while "fill" = downsize with scrooling
+    #logo: sipher_logo.jpeg
+---
+
+<style>                     
+.navbar {
+  background-color:#0062B0;
+  border-color:#0062B0;
+}
+.section.sidebar {
+  background-color: #A5CAE5;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+    background-color: #516199;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: #312760;
+}
+.nav-tabs-custom > .nav-tabs > li.active {
+border-top-color: #16214A}
+
+.navbar-inverse .dropdown-menu > li > a:hover,
+.navbar-inverse .dropdown-menu > li > a:focus {
+    background-color: #516199;
+}
+.navbar-inverse .dropdown-menu > .active > a,
+.navbar-inverse .dropdown-menu > .active > a:hover,
+.navbar-inverse .dropdown-menu > .active > a:focus {
+  background-color: #312760;
+}
+</style>
+
+# SIPHER Products
+
+{.sidebar  data-width=300} 
+---
+
+### SIPHER Product Guide
+
+Category headings offer a dropdown menu to allow navigation and selection of products, including the option to compare all products within a category. 
+
+Each product page provides details of its characteristics including strengths and limitations plus current status. There are three status types;
+
+**Ready:** Complete and available. 
+
+**In Progress/Ready Soon:** Nearing completion available shortly.
+
+**In Development:** Early stages with significant work still required.
+
+Please direct all enquiries and feedback to the SIPHER Consortium via email: <sipher@glasgow.ac.uk>
+
+Please use links provided to return to [SIPHER homepage](https://sipher.ac.uk) 
+
+```{r }
+# last updated 
+definitions$last_update <- lubridate::today() %>% format(., "%d-%B-%Y")
+```
+
+Last updated: `r definitions$last_update`
+
+Main panel
+---
+
+###
+
+#### SIPHER's Qualitative Products
+* [Employment and Health Evidence and Gap Map](#gapmaplink) - Ready
+* [Causal Loop Diagrams](#causalloopdiagramslink) - Ready
+
+#### SIPHER's Data Products
+* [Synthetic Population](#synthpoplink) - Ready
+* [Health Indicator Set](#healthindicatorslink) - Ready
+* [Inclusive Economies Indicator Set](#inclusiveeconomyindicatorslink) - Ready
+* [SIPHER-7 Wellbeing Preferences](#sipher7domainpreferenceslink) - In Progress/Ready Soon
+* [Aversion to Inequality](#aversiontoinequalitylink) - In Progress/Ready Soon
+* [Self-Reported Outcomes](#selfreportedhealthandwellbeinglink) - In Progress/Ready Soon
+
+#### SIPHER's Quantitative Products
+* [Dynamical Systems Model](#systemdynamicslink) - In Development
+* [Static Microsimulation](#staticmicrosimulationlink) - Ready
+* [Dynamic Microsimulation](#dynamicmicrosimulationlink) - In Development 
+* [Decision Support Tool](#decisionsupporttoollink) - In Development
+* [K-means Clustering](#kmeanslink) - Ready 
+* [Small-Area Indicator Estimation](#smallareaestimationslink) – Ready
+
+<br>
+
+<left>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<left>
+<br>
+
+# Employment and Health Evidence and Gap Map {data-navmenu="Qualitative Products" #gapmaplink}
+
+###
+
+<center>
+
+```{r, out.width = definitions$fig_size_M, fig.cap = "The Employment and Health Evidence and Gap Map is a systematic visualisation of research findings surrounding the impact employment has on health."}
+knitr::include_graphics(here::here("RImages/Qual","GapMap.jpeg")) 
+```
+
+<center>
+
+### 
+
+```{r, echo = FALSE}
+
+# Gap Map table 
+
+options(knitr.kable.NA = "")
+
+GapMapTable <- .TableFn(QualProducts, `Employment and Health Evidence and Gap Map`) %>% 
+               .FormatTableFn(., "Employment and Health Evidence and Gap Map")
+
+GapMapTable
+
+```
+
+<br>
+<center>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<center>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# Causal Loop Diagrams {data-navmenu="Qualitative Products" #causalloopdiagramslink}
+
+### 
+
+<center>
+
+```{r, out.width = definitions$fig_size_S, fig.cap = "Snapshot from a causal loop diagram specifying the pathways by which Quality-Adjusted Life Expectancy (QALE) is influenced."}
+knitr::include_graphics(here::here("RImages/Qual","CLD.jpeg"))
+```
+
+<center>
+
+###
+
+```{r, echo = FALSE}
+
+# Causal loop diagram table 
+
+options(knitr.kable.NA = "")
+
+CLDTable <- .TableFn(QualProducts, `Causal Loop Diagrams`) %>% 
+            .FormatTableFn(., "Causal Loop Diagrams")
+
+CLDTable
+
+```
+
+<br>
+<center>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<center>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# Compare All Qualitative Products {data-navmenu="Qualitative Products"}
+
+###
+
+<left>
+
+```{r, echo = FALSE}
+
+# All qualitative Products table 
+
+options(knitr.kable.NA = "")
+
+QualTable <- QualProducts %>% 
+             remove_empty(., which = "rows") %>% 
+             knitr::kable(format = "html", caption = "Compare All Qualitative Products") %>% 
+             kable_styling(., "striped", full_width = F) %>% 
+             column_spec(1, width_max = '2in') %>% 
+             column_spec(2, width_max = '4in') %>% 
+             column_spec(3, width_max = '4in') 
+QualTable
+
+```
+<left>
+
+<br>
+<center>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<center>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# Synthetic Population {data-navmenu="Data Products" #synthpoplink}
+
+### 
+
+<center>
+
+```{r, out.width = definitions$fig_size_S, fig.cap = "This table provides an example of the underlying data structure and attributes covered in the individual-level synthetic population."}
+knitr::include_graphics(here::here("RImages/Data","SyntheticPopulation2.jpeg")) 
+```
+
+<center>
+
+### 
+
+```{r, echo = FALSE}
+
+# SYnthetic population table 
+
+options(knitr.kable.NA = "")
+
+SyntheticPopulationTable <- .TableFn(DataProducts, `Synthetic Population (Digital Twin)`) %>% 
+                            .FormatTableFn(., "Synthetic Population (Digital Twin)")
+                 
+SyntheticPopulationTable
+
+```
+
+<br>
+<center>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<center>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# Health Indicator Data Set {data-navmenu="Data Products" #healthindicatorslink}
+
+### 
+
+<center>
+
+```{r, out.width = definitions$fig_size_S, fig.cap = "An illustration of the spatial distribution of Quality-Adjusted Life Expectancy for Local Authorities across Great Britain in 2018-2020."}
+knitr::include_graphics(here::here("RImages/Data","HealthIndicators1.jpeg"))
+```
+
+<center>
+
+### 
+
+```{r, echo = FALSE}
+
+# Health indicators table
+
+options(knitr.kable.NA = "")
+
+HealthIndicatorTable <- .TableFn(DataProducts, `Health Indicator Data Set`) %>% 
+                        .FormatTableFn(., "Health Indicator Data Set")
+                 
+HealthIndicatorTable
+
+```
+
+### 
+
+```{r, echo = FALSE}
+
+options(knitr.kable.NA = "")
+
+
+AllHealthIndicators <- HealthIndicators %>% 
+                       remove_empty(., which = "rows") %>% 
+                       fill(4, .direction = "down") %>%
+                       knitr::kable(format = "html", caption = "List of Available Health Indicators") %>% 
+                       kable_styling(., "striped", full_width = F) %>% 
+                       column_spec(1, width = '2in') %>% 
+                       column_spec(2, width = '3in') %>% 
+                       column_spec(3, width = '1in') %>%     
+                       column_spec(4, width = '2in') 
+
+AllHealthIndicators
+
+```
+
+<br>
+<center>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<center>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# Inclusive Economy Indicator Data Set {data-navmenu="Data Products" #inclusiveeconomyindicatorslink}
+
+### 
+
+```{r, echo = FALSE}
+
+# Inclusive economy table 
+
+options(knitr.kable.NA = "")
+
+InclusiveEconomyTable <- .TableFn(DataProducts, `Inclusive Economy Indicator Data Set`) %>% 
+                         .FormatTableFn(., "Inclusive Economy Indicator Data Set")
+
+InclusiveEconomyTable
+
+```
+
+### 
+
+```{r, include=FALSE}
+IETable3 <- IEIndicators %>% 
+            remove_empty(., which = "rows") %>% 
+            fill(1, .direction = "down") %>%
+            fill(2, .direction = "down") %>%
+           knitr::kable(., "html", caption = "List of Inclusive Economy Indicators") %>%
+            kable_styling(., "striped", full_width = F) %>%
+                   column_spec(1, width = '2in') %>%
+                   column_spec(2, width = '2in') %>% 
+                   column_spec(3, width = '4in')             
+```
+
+
+```{r, echo = FALSE}
+
+IETable3
+
+```
+
+<br>
+<center>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<center>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# SIPHER-7 Wellbeing Domain Preferences (Survey Data Set) {data-navmenu="Data Products" #sipher7domainpreferenceslink}
+
+### 
+
+```{r, echo = FALSE}
+
+# SIPHER 7 Data Set table 
+
+options(knitr.kable.NA = "")
+
+SIPHER7Table <- .TableFn(DataProducts, `SIPHER-7 Wellbeing Domain Preferences (Survey Data Set)`) %>% 
+                .FormatTableFn(., "SIPHER-7 Wellbeing Domain Preferences (Survey Data Set)")
+
+SIPHER7Table
+
+```
+
+<br>
+<center>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<center>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# Aversion to Inequality (Survey Data Set) {data-navmenu="Data Products" #aversiontoinequalitylink}
+
+### 
+
+<center>
+
+```{r, out.width = definitions$fig_size_S, fig.cap = "An exemplary question from the underlying survey: Which inequality setting would you consider more favorable in a country?"}
+knitr::include_graphics(here::here("RImages/Data","AversionInequality1.jpeg"))
+```
+
+<center>
+
+### 
+
+```{r, echo = FALSE}
+
+# Aversion to inequality data set table 
+
+options(knitr.kable.NA = "")
+
+AversionInequalityTable <- .TableFn(DataProducts, `Aversion to Inequality (Survey Data Set)`) %>% 
+                           .FormatTableFn(., "Aversion to Inequality (Survey Data Set)")
+
+AversionInequalityTable
+
+```
+
+<br>
+<center>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<center>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# Self-Reported Health and Wellbeing Outcomes (Survey Data Set) {data-navmenu="Data Products" #selfreportedhealthandwellbeinglink}
+
+### 
+
+```{r, echo = FALSE}
+
+# Self-reported health survey data set 
+
+options(knitr.kable.NA = "")
+
+SelfReportedHealthTable <- .TableFn(DataProducts, `Self-Reported Health and Wellbeing Outcomes (Survey Data Set)`) %>%
+                           .FormatTableFn(., "Self-Reported Health and Wellbeing Outcomes (Survey Data Set)")
+
+SelfReportedHealthTable
+
+```
+
+<br>
+<center>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<center>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# Compare All Data Products {data-navmenu="Data Products"}
+
+###
+
+```{r, echo = FALSE}
+
+# All data Products table 
+
+options(knitr.kable.NA = "")
+
+DataTable <- DataProducts %>% 
+             remove_empty(., which = "rows") %>% 
+             knitr::kable(format = "html", caption = "Compare All Data Products") %>% 
+             kable_styling(., "striped", full_width = F) %>% 
+             column_spec(1, width_min = '2in') %>% 
+             column_spec(2, width_min = '4in') %>% 
+             column_spec(3, width_min = '4in') %>%
+             column_spec(4, width_min = '4in') %>%
+             column_spec(5, width_min = '4in') %>%
+             column_spec(6, width_min = '4in') %>%
+             column_spec(7, width_min = '4in')
+
+DataTable
+
+```
+
+<br>
+<left>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<left>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# Dynamical Systems Model {data-navmenu="Quantitative Products" #systemdynamicslink}
+
+###
+
+<center>
+
+```{r, out.width = definitions$fig_size_M, fig.cap= "This systems map underlying the WS4 model provides a visualisation of all captured nodes and their interactions."}
+knitr::include_graphics(here::here("RImages/Quant","SystemsMapWS4.jpeg")) 
+```
+
+<center>
+
+###
+
+```{r, echo = FALSE}
+
+# Dynamical Systems Model overview table 
+
+SDTableOverview <- .TableFn(QuantProducts, `Dynamical Systems Model`) %>%
+                   .FormatTableFn(., "Dynamical Systems Model")
+
+SDTableOverview
+
+```
+
+###
+
+```{r, echo = FALSE}
+
+# SD variables and explanations table
+
+SDVarsTable <- SDDefinitions %>% 
+               .FormatTableFn(., "Inclusive Economy Dynamical Systems Model Variable Definitions")             
+
+SDVarsTable
+
+```
+
+<br>
+<center>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<center>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# Static Microsimulation {data-navmenu="Quantitative Products" #staticmicrosimulationlink}
+
+### 
+
+```{r, echo = FALSE}
+
+# Static microsimulation table
+
+options(knitr.kable.NA = "")
+
+StaticMicrosimulationTable <- .TableFn(QuantProducts, `Static Microsimulation`) %>%
+                              .FormatTableFn(., "Static Microsimulation")
+
+StaticMicrosimulationTable
+
+```
+
+<br>
+<center>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<center>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# Dynamic Microsimulation {data-navmenu="Quantitative Products" #dynamicmicrosimulationlink}
+
+### 
+
+<center>
+
+```{r, out.width = definitions$fig_size_S, fig.cap = "A visualisation of the pathways used in the dynamic microsimulation model of disposable income to mental health."}
+knitr::include_graphics(here::here("RImages/Quant","ModelStructureWS5.jpeg")) 
+```
+
+<center>
+
+###
+
+```{r, echo = FALSE}
+
+# Dynamic microsimulation model overview table 
+
+options(knitr.kable.NA = "")
+
+DynamicMicrosimulationTable <- .TableFn(QuantProducts, `Dynamic Microsimulation`) %>%
+                               .FormatTableFn(., "Dynamic Microsimulation")
+
+DynamicMicrosimulationTable
+
+```
+
+###
+
+```{r, echo = FALSE} 
+
+# Dynamic Microsimulation pathways and explanations table 
+
+MicroSimPathwaysTable <- MicroSimPathways %>%#
+  .FormatTableFn(., "Dynamic Microsimulation Pathways and Definitions")
+
+MicroSimPathwaysTable
+
+```
+
+<br>
+<center>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<center>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# Decision Support Tool {data-navmenu="Quantitative Products" #decisionsupporttoollink}
+
+### 
+
+<center>
+
+```{r, out.width = definitions$fig_size_M, fig.cap = "Diagrammatic representation of a trade-off between three different objectives.<br>The Decision Support Tool identifies different compromise options to balance this trade-off."}
+knitr::include_graphics(here::here("RImages/Quant","DecisionSupport1.jpeg")) 
+```
+
+<center>
+
+### 
+
+```{r, echo = FALSE}
+
+# Decision support tool table 
+
+options(knitr.kable.NA = "")
+
+DecisionSupportTable <- .TableFn(QuantProducts, `Decision Support Tool`) %>%
+                        .FormatTableFn(., "Decision Support Tool")
+
+DecisionSupportTable
+
+```
+
+<br>
+<center>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<center>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# K-Means Clustering {data-navmenu="Quantitative Products" #kmeanslink}
+
+### 
+
+```{r, echo = FALSE}
+
+# K-means clustering table 
+
+options(knitr.kable.NA = "")
+
+KMeansTable <- .TableFn(QuantProducts, `K-Means Clustering`) %>%
+               .FormatTableFn(., "K-Means Clustering")
+
+KMeansTable
+
+```
+
+<br>
+<center>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<center>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# Small-Area Indicator Estimation {data-navmenu="Quantitative Products" #smallareaestimationslink}
+
+###
+
+<center>
+
+```{r, out.width = definitions$fig_size_M, fig.cap = "A designated small-area approach enables to obtain estimates when data is sparse or incomplete.<br>The example shows patterns for households in England and Wales in 2021 at the Local-Authority-Level."}
+knitr::include_graphics(here::here("RImages/Quant","SmallArea2.jpeg")) 
+```
+
+<center>
+
+###
+
+```{r, echo = FALSE}
+
+# Small-area indicators estimation table 
+
+options(knitr.kable.NA = "")
+
+SmallAreaEstimatesTable <- .TableFn(QuantProducts, `Small-Area Indicator Estimation`) %>%
+                           .FormatTableFn(., "Small-Area Indicator Estimation")
+
+SmallAreaEstimatesTable
+
+```
+
+<br>
+<center>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<center>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# Compare All Quantitative Products {data-navmenu="Quantitative Products"}
+
+###
+```{r, echo = FALSE}
+
+# Quantitative model Products table 
+
+options(knitr.kable.NA = "")
+
+QuantTable <- QuantProducts %>% 
+             remove_empty(., which = "rows") %>% 
+             knitr::kable(format = "html", caption = "Compare All Quantitative Products") %>% 
+             kable_styling(., "striped", full_width = F) %>% 
+             column_spec(1, width_min = '2in') %>% 
+             column_spec(2, width_min = '4in') %>% 
+             column_spec(3, width_min = '4in') %>%     
+             column_spec(4, width_min = '4in') %>% 
+             column_spec(5, width_min = '4in') %>% 
+             column_spec(6, width_min = '4in') %>% 
+             column_spec(7, width_min = '4in')
+
+QuantTable
+
+```
+
+<br>
+<left>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<left>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# Glossary {#glossarylink}
+
+###
+```{r format glossary, echo = FALSE}
+
+# Glossary table 
+
+GlossaryT <- Glossary %>% 
+             .FormatTableFn(., "Glossary of Terms")
+
+GlossaryT
+
+```
+
+<br>
+<center>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<center>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
+
+# Acronyms {#acronymlink}
+
+###
+```{r format acronym, echo = FALSE}
+
+# Acronyms table 
+
+AcronymsT <- Acronyms %>% 
+             .FormatTableFn(., "List of Acronyms")
+
+AcronymsT
+
+```
+
+<br>
+<center>
+```{r, out.width = definitions$fig_size_XS}
+knitr::include_graphics(here::here("RImages/Logo/sipher_logo.jpeg")) # Logo
+```
+<center>
+<br>
+
+Return to [SIPHER homepage](https://sipher.ac.uk) 
