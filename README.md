@@ -13,7 +13,7 @@ This pipeline has not been tested with network drives or network drive installat
 ## Running the Pipeline
 Please read the pre-requisites and ensure that you are working with a current version of R and R-Studio. Please download the entire folder of the pipeline (code -> download zip). Once downloaded, please extract the zipped folder into any local directory of your device. 
 
-To run the pipeline, please open the R-project file “V6.Rproj”, which is stored in the overarching directory. This will prompt a new RStudio Session. You can then open the main control file of the program (“1_main.R”), which is stored in the “RCode/” folder. To run the pipeline, please select all code in “1_main.R” and run it (CTRL + A then CTRL + ENTER). The pipeline will run, and an html application will be stored in the folder “ROutput/”. 
+To run the pipeline, please open the R-project file “V6_GitHub.Rproj”, which is stored in the overarching directory. This will prompt a new RStudio Session. You can then open the main control file of the program (“1_main.R”), which is stored in the “RCode/” folder. To run the pipeline, please select all code in “1_main.R” and run it (CTRL + A then CTRL + ENTER). The pipeline will run, and an html application will be stored in the folder “ROutput/”. 
 
 ## Output
 After having run the pipeline successfully, you will receive an output in the folder “ROutput/”.
