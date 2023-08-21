@@ -27,8 +27,12 @@ Please direct questions or feedback marked “Product Guide” to sipher@glasgow
 
 More information about SIPHER can be found here: https://sipher.ac.uk/
 
-The latest live version of the SIPHER Product Guide can be found here: https://intranet.sphsu.gla.ac.uk/pg/
+The latest live version of the SIPHER Product Guide can be found here: https://sipher.ac.uk/product-guide/
 
+## Acknowledgements
+This work by the SIPHER Consortium was supported by the UK Prevention Research Partnership (MR/S037578/2), which is funded by the British Heart Foundation, Cancer Research UK, Chief Scientist Office of the Scottish Government Health and Social Care Directorates, Engineering and Physical Sciences Research Council, Economic and Social Research Council, Health and Social Care Research and Development Division (Welsh Government), Medical Research Council, National Institute for Health Research, Natural Environment Research Council, Public Health Agency (Northern Ireland), The Health Foundation and Wellcome.
+
+This research was conducted as part of the Systems Science in Public Health and Health Economics Research - SIPHER Consortium and we thank the whole team for valuable input and discussions that have informed this work.
 
 ## About
 Authors: Andreas Hoehn and Emma Comrie 
