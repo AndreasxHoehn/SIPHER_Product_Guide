@@ -8,7 +8,7 @@
 
 **Updated:** 2023-06-17
 
-![Capture](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/cb151a2f-a9d1-4ffd-8131-8e0f528564e4)
+![Capture](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/13ad5b9c-8ee2-4492-8e10-e433a8c9972c)
 
 ## Summary
 The SIPHER consortium brings together a variety of researchers and partners from policy and practice. SIPHER’s systems science methods, data, and tools offer a powerful framework to explore the relationships and interdependencies that shape public health. To support the documentation and disseminating of our research outputs, we have created this SIPHER Product Guide. 
