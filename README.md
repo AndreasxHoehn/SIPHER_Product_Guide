@@ -1,5 +1,14 @@
 # SIPHER Product Guide
 
+## About
+Authors: Andreas Hoehn and Emma Comrie 
+
+Version: 6.0
+
+Updated: 2023-06-17
+
+![Capture](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/cb151a2f-a9d1-4ffd-8131-8e0f528564e4)
+
 ## Summary
 The SIPHER consortium brings together a variety of researchers and partners from policy and practice. SIPHER’s systems science methods, data, and tools offer a powerful framework to explore the relationships and interdependencies that shape public health. To support the documentation and disseminating of our research outputs, we have created this SIPHER Product Guide. 
 
@@ -33,15 +42,6 @@ More information about SIPHER can be found here: https://sipher.ac.uk/
 This work by the SIPHER Consortium was supported by the UK Prevention Research Partnership (MR/S037578/2), which is funded by the British Heart Foundation, Cancer Research UK, Chief Scientist Office of the Scottish Government Health and Social Care Directorates, Engineering and Physical Sciences Research Council, Economic and Social Research Council, Health and Social Care Research and Development Division (Welsh Government), Medical Research Council, National Institute for Health Research, Natural Environment Research Council, Public Health Agency (Northern Ireland), The Health Foundation and Wellcome.
 
 This research was conducted as part of the Systems Science in Public Health and Health Economics Research - SIPHER Consortium and we thank the whole team for valuable input and discussions that have informed this work.
-
-## About
-Authors: Andreas Hoehn and Emma Comrie 
-
-Version: 6.0
-
-Updated: 2023-06-17
-
-![Capture](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/cb151a2f-a9d1-4ffd-8131-8e0f528564e4)
 
 ## SIPHER's Policy Partners 
 ![CapturePP](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/345bbbc2-03ca-4ef0-9403-4c7dd519242e)
