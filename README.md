@@ -1,11 +1,12 @@
 # SIPHER Product Guide
 
 ## About
-Authors: Andreas Hoehn and Emma Comrie 
 
-Version: 6.0
+**Authors:** Andreas Hoehn and Emma Comrie 
 
-Updated: 2023-06-17
+**Version:** 6.0
+
+**Updated:** 2023-06-17
 
 ![Capture](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/cb151a2f-a9d1-4ffd-8131-8e0f528564e4)
 
@@ -29,7 +30,7 @@ To run the pipeline, please open the R-project file “V6_GitHub.Rproj”, which
 ## Output
 After having run the pipeline successfully, you will receive an output in the folder “ROutput/”.
 
-You can also explore the dashboard without running the pipeline. We have stored the most recent version of the pipeline in “ROutput/”.
+You can also explore the dashboard without running the pipeline. We have stored the most recent version of the pipeline in the overarching folder. The file is called "SIPHER_Product_Guide_V6.html". The .html file can be displayed with any browser.
 
 ## Bug Reports & Feedback
 Please direct bug reports directly to andreas.hoehn@glasgow.ac.uk
