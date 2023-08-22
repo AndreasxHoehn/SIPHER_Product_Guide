@@ -45,8 +45,9 @@ This work by the SIPHER Consortium was supported by the UK Prevention Research P
 This research was conducted as part of the Systems Science in Public Health and Health Economics Research - SIPHER Consortium and we thank the whole team for valuable input and discussions that have informed this work.
 
 ## SIPHER's Policy Partners 
-![CapturePP](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/345bbbc2-03ca-4ef0-9403-4c7dd519242e)
+![CapturePP](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/4b97f16e-54e5-47f6-a3db-e310011c4cc1)
 
 ## SIPHER's Practice Partners 
-![CaptureAP](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/f3d84ad7-cf98-41aa-a1ab-076200c3c832)
+![CaptureAP](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/af24d30d-0b2e-4f1c-ae9d-cbc6920495eb)
+
 
