@@ -40,3 +40,6 @@ Authors: Andreas Hoehn and Emma Comrie
 Version: 6.0
 
 Updated: 2023-06-17
+
+![image](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/5460250c-6840-461d-9de6-85d8d336cab7)
+
