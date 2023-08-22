@@ -17,6 +17,8 @@ The latest live version of the SIPHER Product Guide can be found here: https://s
 
 SIPHER’s Product Guide uses the R-package “flexdashboard” to transform a collaborative excel spreadsheet into an interactive web application. This repository provides all underlying data and R-code to re-build SIPHER’s Product Guide. This repository is organised in a pipeline setup: data and images are stored in separate folders, the R-code is broken down into modules and flows unidirectional way. This allows for reproducibility with literally one click.
 
+![CaptureB](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/f122f501-3898-4e62-9062-38948a4b08e6)
+
 ## Pre-Requisites
 This R-pipeline was build using R version 4.3.0 (2023-04-21 ucrt) -- "Already Tomorrow" as well as RStudio 2023.03.1+446 "Cherry Blossom". All packages will be installed (if required) and loaded as part of the R-pipeline. You do not need to do this yourself. We have defined all file paths relative rather than absolute. This means that you do not need to define or modify any file paths yourself. 
 
