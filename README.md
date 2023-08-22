@@ -41,5 +41,5 @@ Version: 6.0
 
 Updated: 2023-06-17
 
-![image](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/5460250c-6840-461d-9de6-85d8d336cab7)
+![Capture](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/c0487976-f465-4cf2-b10a-d3e804a8d4ad)
 
