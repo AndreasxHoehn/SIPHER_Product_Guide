@@ -41,5 +41,11 @@ Version: 6.0
 
 Updated: 2023-06-17
 
-![Capture](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/c0487976-f465-4cf2-b10a-d3e804a8d4ad)
+![Capture](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/cb151a2f-a9d1-4ffd-8131-8e0f528564e4)
+
+## SIPHER's Policy Partners 
+![CapturePP](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/345bbbc2-03ca-4ef0-9403-4c7dd519242e)
+
+## SIPHER's Practice Partners 
+![CaptureAP](https://github.com/AndreasxHoehn/SIPHER_Product_Guide/assets/14837995/f3d84ad7-cf98-41aa-a1ab-076200c3c832)
 
