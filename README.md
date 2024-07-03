@@ -13,7 +13,7 @@
 ## Summary
 The SIPHER consortium brings together a variety of researchers and partners from policy and practice. SIPHER’s systems science methods, data, and tools offer a powerful framework to explore the relationships and interdependencies that shape public health. To support the documentation and disseminating of our research outputs, we have created this SIPHER Product Guide. 
 
-The latest live version of the SIPHER Product Guide can be found here: https://sipher.ac.uk/product-guide/
+The latest live version of the SIPHER Product Guide can be found here: [https://sipher.ac.uk/product-guide/](https://www.gla.ac.uk/research/az/sipher/products/productguide/#d.en.1008914)
 
 SIPHER’s Product Guide uses the R-package “flexdashboard” to transform a collaborative excel spreadsheet into an interactive web application. This repository provides all underlying data and R-code to re-build SIPHER’s Product Guide. This repository is organised in a pipeline setup: data and images are stored in separate folders, the R-code is broken down into modules and flows unidirectional way. This allows for reproducibility with literally one click.
 
